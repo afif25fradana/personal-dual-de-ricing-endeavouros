@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 
 # ==============================================================================
-# KDE Plasma Ricing Automation Script (v6 - Home Logging Edition)
+# KDE Plasma Ricing Automation Script
 #
-# Improvements:
-# 1. Log files now saved directly in $HOME for easy access
-# 2. More robust cursor theme installation
-# 3. Automatic AUR helper fallback (yay → paru)
-# 4. Better error handling for konsave
+# Hope this will work hahahaha
 # ==============================================================================
 
 set -euo pipefail
