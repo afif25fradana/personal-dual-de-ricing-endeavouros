@@ -9,6 +9,17 @@ Notes: This repo contains my personal configuration files for KDE Plasma and Hyp
 ---
 
 # 🚀 QUICK START
+
+### Install paru (AUR helper)
+``bash
+sudo pacman -S --needed base-devel git --noconfirm
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si --noconfirm
+cd ..
+rm -rf paru
+``
+
 ### Clone the repo
 ```bash
 git clone https://github.com/afif25fradana/personal-dual-de-ricing-endeavouros.git
