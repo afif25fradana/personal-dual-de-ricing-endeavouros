@@ -1,0 +1,193 @@
+![Platform](https://img.shields.io/badge/platform-EndeavourOS-blueviolet)
+
+# My EndeavourOS Setup (KDE + Hyprland)
+
+Notes: This repo contains my personal configuration files for KDE Plasma and Hyprland on EndeavourOS. It’s primarily for backup, but feel free to use it if it’s helpful!
+
+**Important:** The Hyprland configuration is *heavily inspired by* the [Hyde Project](https://github.com/HyDE-Project/HyDE). I’ve made minimal customizations so far.
+
+---
+
+# 🚀 QUICK START
+### Clone the repo
+```bash
+git clone https://github.com/afif25fradana/personal-dual-de-ricing-endeavouros.git
+cd personal-dual-de-ricing-endeavouros
+```
+### Activate Install
+```bash
+chmod +x Install-KDE.sh
+```
+
+---
+
+### My KDE Ricing
+
+### (optional) preview what will happen
+```bash
+./Install-KDE.sh --dry
+```
+
+### Run the installer
+```bash
+./Install-KDE.sh
+```
+
+---
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/Login/GRUB.jpg" alt="GRUB Screenshot" width="100%">
+      <br>
+      <a href="https://github.com/vinceliuice/Elegant-grub2-themes" target="_blank">GRUB Theme</a>
+    </td>
+    <td align="center">
+      <img src="screenshots/Login/sddm_screenshot.png" alt="SDDM Screenshot" width="100%">
+      <br>
+      SDDM
+    </td>
+  </tr>
+</table>
+
+### Hyprland [Adaptation of the Hyde Project](https://github.com/HyDE-Project/HyDE)
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/Hyprland/250727_12h52m22s_screenshot.png" alt="Hyprland Screenshot 1" width="100%">
+      <br>
+      </td>
+    <td align="center">
+      <img src="screenshots/Hyprland/250727_12h51m24s_screenshot.png" alt="Hyprland Screenshot 2" width="100%">
+      <br>
+      </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screenshots/Hyprland/250727_12h50m03s_screenshot.png" alt="Hyprland Screenshot 3" width="100%">
+      <br>
+      </td>
+    <td align="center">
+      <img src="screenshots/Hyprland/250726_17h53m50s_screenshot.png" alt="Hyprland Screenshot 4" width="100%">
+      <br>
+      </td>
+  </tr>
+</table>
+
+### KDE Plasma
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/KDE/Screenshot_20250727_124038.png" alt="KDE Screenshot 1" width="100%">
+      <br>
+      </td>
+    <td align="center">
+      <img src="screenshots/KDE/Screenshot_20250727_124048.png" alt="KDE Screenshot 2" width="100%">
+      <br>
+      </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screenshots/KDE/Screenshot_20250727_124057.png" alt="KDE Screenshot 3" width="100%">
+      <br>
+      </td>
+    <td align="center">
+      <img src="screenshots/KDE/untitled.gif" alt="KDE Screenshot 4" width="100%">
+      <br>
+      </td>
+  </tr>
+</table>
+
+---
+
+## 📖 Configuration Details
+| Components        | Specifications        |
+|-------------------|----------------------|
+| **Distro**        | EndeavourOS          |
+| **Kernel**        | Linux Zen            |
+| **Main Desktop**  | KDE Plasma 6         |
+| **Window Manager**| Hyprland             |
+| **Login Manager** | SDDM                 |
+| **Terminal**      | Kitty (Hyprland) & Konsole (KDE) |
+| **Shell**         | Fish                 |
+
+<br>
+
+| Ricing       | KDE            | Hyprland                |
+|--------------|----------------|-------------------------|
+| **Theme**    | Sweet-Dark     | Hyde Project (default)  |
+| **Icon**     | Papyrus        | Papyrus                 |
+| **Bar**      | -              | Waybar (default from Hyde Project) |
+| **Launcher** | -              | Wofi (default from Hyde Project)   |
+| **Wallpaper**| [PURPLE NIGHT SKY 4K](https://steamcommunity.com/sharedfiles/filedetails/?id=3020093729) | [Wallhaven](https://wallhaven.cc) |
+| **Additional Hyprland Notes** | - | The configuration still largely follows the *defaults from Hyde Project*. Personal customization may be minimal or not yet significant. |
+
+---
+
+## 💻 System Specifications (LENOVO V14-IIL Laptop)
+
+This configuration was tested and ran optimally on my laptop with the following details:
+
+| Components      | Specifications                      |
+|-----------------|------------------------------------|
+| **Laptop Model**| LENOVO V14-IIL (82C4)              |
+| **CPU**         | Intel Core i5-1035G1 (Ice Lake-U, 4 Cores, 8 Threads) |
+| **Graphics**    | Intel UHD Graphics (Ice Lake-U GT2)|
+| **RAM**         | 12 GB DDR4 (8 GB SODIMM + 4 GB On-board) |
+| **Storage**     | 512 GB NVMe SSD SKHynix            |
+| **Screen**      | 14.0 inches, Full HD (1920x1080)   |
+| **OS**          | Windows 11 (Dual-boot with EndeavourOS) |
+
+## 🖥️ Dual Boot & Drive Info
+
+This configuration works on a single 512 GB NVMe SSD drive used to dual-boot Windows 11 and EndeavourOS, plus dual desktop environments (KDE + Hyprland) on the Linux side.
+
+It's safe to say that it's still possible to run a complex setup like this on a single drive, as long as the partitions are carefully organized from the start.
+
+---
+
+### 📦 “Why + How” blurb for README footer
+
+**Why this repo exists**  
+I constantly distro-hop or nuke my system while testing kernels.  
+One `git clone` + `./Install-KDE.sh` gets me back to:
+- Plasma 6 with Sweet-Dark, Papyrus icons, my transparent toolbar Kvantum theme  
+- The exact same 4K night-sky live wallpaper (Smart-Video-Wallpaper-Reborn)
+- Hyprland configs in under 30 seconds  
+All without remembering 47 manual steps.
+
+---
+
+## 🔧 Troubleshooting Quick-Fix Cheat-Sheet for myself if i forgot
+
+| Symptom / Error | Most-likely cause | One-liner fix |
+|-----------------|-------------------|---------------|
+| **Installer refuses to run** | Not on Arch-based distro | `cat /etc/arch-release` → must exist. Otherwise use manual steps. |
+| **konsave import fails** | Profile ID changed / new konsave version | `konsave --list` → copy the new ID, then `konsave -a <ID>` |
+| **Wallpaper is black / static** | Smart-Video-Wallpaper-Reborn not enabled | Right-click desktop → **Configure Wallpaper** → choose **Smart Video Wallpaper** → point to `~/Videos/Wallpaper/night-sky-purple-moon-clouds-moewalls-com.mp4` |
+| **Icons look broken** | Cache stale | `kbuildsycoca6` then re-log |
+| **Cursor or Kvantum theme not applied** | Theme folder missing / wrong name | Check `~/.config/Kvantum/Sweet-Transparent-Toolbar` exists and `kvantumrc` points to it |
+| **Plasma shell crash loop** | Mixed Qt5/Qt6 libs | `kquitapp6 plasmashell && kstartplasma-plasmashell` |
+| **Dual-boot GRUB doesn’t show EndeavourOS** | Windows update overwrote EFI | `sudo grub-install --efi-directory=/boot/efi --bootloader-id=EndeavourOS` then `sudo grub-mkconfig -o /boot/grub/grub.cfg` |
+| **AUR build fails** | `yay`/`paru` missing or keyring error | `sudo pacman -Sy archlinux-keyring && $AUR_HELPER -Syu` |
+| **Fonts show tofu boxes** | Nerd-fonts not installed | `sudo pacman -S ttf-nerd-fonts-symbols ttf-fira-code` |
+| **Need to roll back** | Script backed configs up | Copy files back from `~/.config/kde-backup-<timestamp>` or `~/.config/<dir>_backup_<timestamp>` |
+
+Still stuck?  
+Open an issue with:
+- `~/kde-install-<timestamp>.log`  
+- `inxi -Fxxz` output  
+- exact error message
+
+---
+
+## 📜 Credits
+- KDE theme: [Sweet](https://github.com/EliverLara/Sweet) by EliverLara
+- Hyprland dotfiles: [Hyde Project](https://github.com/Hyde-project/hyde)
+- GRUB theme: [Elegant](https://github.com/vinceliuice/Elegant-grub2-themes) by vinceliuice
+
+No need to fork or star—this is just my personal backup! But if you find it useful, go for it! 😊
