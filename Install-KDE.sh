@@ -68,7 +68,6 @@ install_packages() {
 setup_core_tools() {
     log "Setting up core tools..."
     run pipx install konsave
-    # FIX 1: The ONLY line needed for PATH. Handles all shells permanently.
     run pipx ensurepath
 }
 
