@@ -10,15 +10,16 @@ Notes: This repo contains my personal configuration files for KDE Plasma and Hyp
 
 # 🚀 QUICK START
 
-### Install paru (AUR helper)
-``bash
+### Install paru (AUR Helper)
+
+```bash
 sudo pacman -S --needed base-devel git --noconfirm
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si --noconfirm
 cd ..
 rm -rf paru
-``
+```
 
 ### Clone the repo
 ```bash
