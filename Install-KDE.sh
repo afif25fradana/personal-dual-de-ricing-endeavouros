@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # ==============================================================================
-# KDE Plasma Ricing Automation Script (Definitive Version - Luna v4)
-# Final logic combining the best of all iterations.
+# KDE Plasma Ricing Automation Script
+# I Hope All Shit Goes Well
 # ==============================================================================
 
 set -euo pipefail
