@@ -18,6 +18,7 @@ cd paru-bin
 makepkg -si --noconfirm
 cd ..
 rm -rf paru-bin
+```
 
 ### Clone the repo
 ```bash
