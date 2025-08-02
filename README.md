@@ -161,38 +161,14 @@ It's safe to say that it's still possible to run a complex setup like this on a 
 
 ---
 
-### 📦 “Why + How” blurb for README footer
+### 📦 Why I Make This Shit?
 
-**Why this repo exists**  
 I constantly distro-hop or nuke my system while testing kernels.  
 One `git clone` + `./Install-KDE.sh` gets me back to:
 - Plasma 6 with Sweet-Dark, Papyrus icons, my transparent toolbar Kvantum theme  
 - The exact same 4K night-sky live wallpaper (Smart-Video-Wallpaper-Reborn)
 - Hyprland configs in under 30 seconds  
 All without remembering 47 manual steps.
-
----
-
-## 🔧 Troubleshooting Quick-Fix Cheat-Sheet for myself if i forgot
-
-| Symptom / Error | Most-likely cause | One-liner fix |
-|-----------------|-------------------|---------------|
-| **Installer refuses to run** | Not on Arch-based distro | `cat /etc/arch-release` → must exist. Otherwise use manual steps. |
-| **konsave import fails** | Profile ID changed / new konsave version | `konsave --list` → copy the new ID, then `konsave -a <ID>` |
-| **Wallpaper is black / static** | Smart-Video-Wallpaper-Reborn not enabled | Right-click desktop → **Configure Wallpaper** → choose **Smart Video Wallpaper** → point to `~/Videos/Wallpaper/night-sky-purple-moon-clouds-moewalls-com.mp4` |
-| **Icons look broken** | Cache stale | `kbuildsycoca6` then re-log |
-| **Cursor or Kvantum theme not applied** | Theme folder missing / wrong name | Check `~/.config/Kvantum/Sweet-Transparent-Toolbar` exists and `kvantumrc` points to it |
-| **Plasma shell crash loop** | Mixed Qt5/Qt6 libs | `kquitapp6 plasmashell && kstartplasma-plasmashell` |
-| **Dual-boot GRUB doesn’t show EndeavourOS** | Windows update overwrote EFI | `sudo grub-install --efi-directory=/boot/efi --bootloader-id=EndeavourOS` then `sudo grub-mkconfig -o /boot/grub/grub.cfg` |
-| **AUR build fails** | `yay`/`paru` missing or keyring error | `sudo pacman -Sy archlinux-keyring && $AUR_HELPER -Syu` |
-| **Fonts show tofu boxes** | Nerd-fonts not installed | `sudo pacman -S ttf-nerd-fonts-symbols ttf-fira-code` |
-| **Need to roll back** | Script backed configs up | Copy files back from `~/.config/kde-backup-<timestamp>` or `~/.config/<dir>_backup_<timestamp>` |
-
-Still stuck?  
-Open an issue with:
-- `~/kde-install-<timestamp>.log`  
-- `inxi -Fxxz` output  
-- exact error message
 
 ---
 
