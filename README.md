@@ -51,12 +51,12 @@ chmod +x Install-KDE.sh
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/Login/GRUB.jpg" alt="GRUB Screenshot" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/Login/GRUB.jpg" alt="GRUB Screenshot" width="100%">
       <br>
       <a href="https://github.com/vinceliuice/Elegant-grub2-themes" target="_blank">GRUB Theme</a>
     </td>
     <td align="center">
-      <img src="screenshots/Login/sddm_screenshot.png" alt="SDDM Screenshot" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/Login/sddm_screenshot.png" alt="SDDM Screenshot" width="100%">
       <br>
       SDDM
     </td>
@@ -68,21 +68,21 @@ chmod +x Install-KDE.sh
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/Hyprland/250727_12h52m22s_screenshot.png" alt="Hyprland Screenshot 1" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/Hyprland/250727_12h50m03s_screenshot.png" alt="Hyprland Screenshot 1" width="100%">
       <br>
       </td>
     <td align="center">
-      <img src="screenshots/Hyprland/250727_12h51m24s_screenshot.png" alt="Hyprland Screenshot 2" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/Hyprland/250727_12h51m24s_screenshot.png" alt="Hyprland Screenshot 2" width="100%">
       <br>
       </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="screenshots/Hyprland/250727_12h50m03s_screenshot.png" alt="Hyprland Screenshot 3" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/Hyprland/250727_12h52m22s_screenshot.png" alt="Hyprland Screenshot 3" width="100%">
       <br>
       </td>
     <td align="center">
-      <img src="screenshots/Hyprland/250726_17h53m50s_screenshot.png" alt="Hyprland Screenshot 4" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/Hyprland/250726_17h53m50s_screenshot.png" alt="Hyprland Screenshot 4" width="100%">
       <br>
       </td>
   </tr>
@@ -93,21 +93,21 @@ chmod +x Install-KDE.sh
 <table>
   <tr>
     <td align="center">
-      <img src="screenshots/KDE/Screenshot_20250727_124038.png" alt="KDE Screenshot 1" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/KDE/Screenshot_20250729_222620.png" alt="KDE Screenshot 1" width="100%">
       <br>
       </td>
     <td align="center">
-      <img src="screenshots/KDE/Screenshot_20250727_124048.png" alt="KDE Screenshot 2" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/KDE/Screenshot_20250731_092322.png" alt="KDE Screenshot 2" width="100%">
       <br>
       </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="screenshots/KDE/Screenshot_20250727_124057.png" alt="KDE Screenshot 3" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/KDE/Screenshot_20250731_093054.png" alt="KDE Screenshot 3" width="100%">
       <br>
       </td>
     <td align="center">
-      <img src="screenshots/KDE/untitled.gif" alt="KDE Screenshot 4" width="100%">
+      <img src="https://github.com/afif25fradana/dump-screenshot/blob/1688bdedbff7dc3a353633b5c605b54530b5452c/KDE/Screenshot_20250731_093156.png" alt="KDE Screenshot 4" width="100%">
       <br>
       </td>
   </tr>
