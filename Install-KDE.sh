@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
 # ==============================================================================
-# KDE Plasma Ricing Automation Script
-# I Hope All Shit Goes Well
+# KDE Plasma Ricing Automation Script (Definitive Version - Luna v5)
+#
+# Incorporates all iterative fixes and community feedback for a robust,
+# bullet-proof installation on Arch-based systems.
 # ==============================================================================
 
 set -euo pipefail
@@ -17,8 +19,8 @@ readonly KONSAVE_PROFILE_NAME="ricing_kde_full"
 readonly KONSAVE_ARCHIVE_FILE="${SCRIPT_DIR}/KDE-Ricing/${KONSAVE_PROFILE_NAME}.knsv"
 
 readonly PACMAN_PACKAGES=(
-    base-devel git pipx python-pyqt5 kvantum papirus-icon-theme
-    kconfig kwin plasma-workspace xorg-xrandr
+    base-devel git python-pipx python-pyqt5 kvantum papirus-icon-theme
+    kconfig kwin plasma-workspace xorg-xrandr rsync
 )
 readonly AUR_PACKAGES=(
     plasma6-wallpapers-smart-video-wallpaper-reborn
@@ -52,7 +54,8 @@ pre_flight_checks() {
         AUR_HELPER="paru"
     else
         AUR_HELPER=""
-        warn "No AUR helper found. Skipping AUR packages"
+        warn "No AUR helper (yay/paru) found. AUR packages will be skipped."
+        warn "You can install one with: sudo pacman -S yay"
     fi
 }
 
@@ -68,12 +71,24 @@ install_packages() {
 setup_core_tools() {
     log "Setting up core tools..."
     run pipx install konsave
+    run pipx inject konsave setuptools
     run pipx ensurepath
+    export PATH="$HOME/.local/bin:$PATH"
+}
+
+verify_packages() {
+    log "Verifying that critical commands are available..."
+    for pkg_cmd in konsave kwriteconfig6 rsync; do
+        if ! command -v "$pkg_cmd" &>/dev/null; then
+            fail "Verification failed: '$pkg_cmd' command not found. Installation may be incomplete."
+        fi
+    done
+    log "Critical commands verified."
 }
 
 install_assets() {
     log "Installing visual assets..."
-    # Kvantum theme (using safer rsync)
+    # Kvantum theme
     local theme_name="Sweet-transparent-toolbar"
     local theme_src="${SCRIPT_DIR}/KDE-Ricing/$theme_name"
     if [[ -d "$theme_src" ]]; then
@@ -83,15 +98,13 @@ install_assets() {
         run kwriteconfig6 --file "$theme_dest/kvantum.kvconfig" --group "General" --key "theme" "$theme_name"
         log "Kvantum theme configured."
     fi
-
-    # Other assets (wallpaper, cursors) can be added here following the same pattern.
+    # Add other assets like cursors and wallpapers here if needed
 }
 
 apply_konsave_profile() {
     log "Applying konsave profile..."
-    [[ -f "$KONSAVE_ARCHIVE_FILE" ]] || fail "Konsave profile missing"
+    [[ -f "$KONSAVE_ARCHIVE_FILE" ]] || fail "Konsave profile missing: $KONSAVE_ARCHIVE_FILE"
     
-    # FIX 2: Use --force for a cleaner, single, idempotent command.
     run konsave -i "$KONSAVE_ARCHIVE_FILE" --force
     run konsave -a "$KONSAVE_PROFILE_NAME"
     log "Konsave profile applied."
@@ -113,11 +126,12 @@ EOF
 
 # --- Main Execution ---
 main() {
-    echo -e "\n\e[1;35m==== KDE Ricing Installer (Definitive v4) ====\e[0m"
+    echo -e "\n\e[1;35m==== KDE Ricing Installer (Definitive v5) ====\e[0m"
     
     pre_flight_checks
     install_packages
     setup_core_tools
+    verify_packages
     install_assets
     apply_konsave_profile
     finalize
